@@ -1,0 +1,35 @@
+  \documentclass{article}
+\title{Homework №1}%
+\author{Yablonskaya Vlada}%
+\date{ 04 April, 2022}%
+\begin{document}
+\maketitle%
+\textbf{Condition:} 
+\\Calculate the integral \( \oint_C \frac{e^z}{(z-i)^2(z+2)}{dz} \) in the following cases of contour assignment:
+\begin{enumerate}
+  \item  \(|z-i|=2\)
+  \item  \(|z+2-i|=3\)
+\end{enumerate}
+
+\textbf{Solution:} 
+\\
+\\ 1) In the circle $|z-i|<2$ there is one point z=i  (multiplicity 2).
+\\ Then $f(z)=\frac{e^z}{z+2}$, and we will write the fraction in the form $\frac{f(z)}{(z-i)^2}=\frac{\frac{e^z}{z+2}}{(z-i)^2}$
+\\ 
+\\ \textit{Calculations:} 
+\\ \( \oint_C \frac{e^z}{(z-i)^2(z+2)}{dz} = \left. 2\pi i (\frac{e^z}{z+2})'\right|_{z=i} = \left. 2\pi i \frac{e^z(z+2)-e^z}{(z+2)^2})\right|_{z=i}= \left. 2\pi i \frac{e^z(z+1)}{(z+2)^2})\right|_{z=i} =  2\pi i \frac{(i+1)}{(i+2)^2}{e^i}\)
+\\
+\\ 2)  In the circle $|z+2-i|<3$ there is two points z=i and z=-2. Therefore, the integral is represented as the sum of two integrals, where each contour covers only one point. Since the first root coincides with the root from the previous point, then take its circle.
+\\ For the second root, take the circle $|z+2+i|<2$, which includes the point z=-2.
+\\Then $f(z)=\frac{e^z}{(z-i)^2}$, and we will write the fraction in the form $\frac{f(z)}{z+2}=\frac{\frac{e^z}{(z-i)^2}}{z+2}$
+\\ \( \oint_C \frac{e^z}{(z-i)^2(z+2)}{dz}=  2\pi i \frac{e^{-2}}{(2+i)^2}\)
+\\
+\\ \textit{Calculations:} 
+\\  \( \oint_C \frac{e^z}{(z-i)^2(z+2)}{dz}=  2\pi i \frac{e^{-2}}{(2+i)^2}+ 2\pi i \frac{(i+1)}{(2+i)^2}{e^i}=\frac{2\pi i}{(2+i)^2}{(e^{-2}+e^i(1+i))}\)
+\\
+\\\textbf{Answer:}
+\begin{enumerate}
+  \item  \(2\pi i \frac{(i+1)}{(i+2)^2}{e^i}\)
+  \item  \(\frac{2\pi i}{(2+i)^2}{(e^{-2}+e^i(1+i))}\)
+\end{enumerate}
+\end{document}
